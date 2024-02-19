@@ -24,23 +24,21 @@ body {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   &-nav {
+   &__nav {
       display: flex;
       list-style-type: none;
       margin: 0;
       padding-left: 0;
       gap: 4.8rem;
    }
-   &-link {
-      font-size: 1.6rem;
+   &__link {
       color: $green;
       text-decoration: none;
       &:hover {
          color: $orange;
       }
    }
-   &-tel {
-      font-size: 1.6rem;
+   &__tel {
       color: $green;
       font-weight: 500;
       text-decoration: none;
@@ -48,7 +46,7 @@ body {
          color: $orange;
       }
    }
-   &-cart {
+   &__cart {
       display: block;
       width: 3.8rem;
       height: 3.8rem;
@@ -65,7 +63,7 @@ body {
          border: 1px solid $green;
       }
    }
-   &-counter {
+   &__counter {
       font-size: 0.8rem;
       color: white;
       position: absolute;
