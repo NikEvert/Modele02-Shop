@@ -19,7 +19,7 @@ body {
 
 .header {
    max-width: 1440px;
-   margin: 0 auto 6rem;
+   margin: 0 auto 4.7rem;
    padding: 4rem 15px 0 15px;
    display: flex;
    justify-content: space-between;
@@ -49,8 +49,8 @@ body {
    }
    &__cart {
       display: block;
-      width: 3.8rem;
-      height: 3.8rem;
+      width: 4rem;
+      height: 4rem;
       border-radius: 100%;
       background-color: $orange;
       background-image: url('../images/cart.svg');
@@ -76,8 +76,8 @@ body {
    display: block;
    background-image: url('../images/logo.svg');
    background-repeat: no-repeat;
-   background-size: cover;
-   width: 12.3rem;
+   background-size: contain;
+   width: 12rem;
    height: 3.2rem;
 }
 
@@ -97,7 +97,7 @@ body {
    &__item {
       margin-left: 12rem;
       max-width: 378px;
-      margin-top: 6rem;
+      margin-top: 3rem;
    }
    &__link {
       margin-top: 6rem;
@@ -109,8 +109,8 @@ body {
       gap: 30px;
    }
    &__cover {
-      flex-basis: 763px;
-      height: 763px;
+      flex-basis: 758px;
+      height: 758px;
       border: 1px solid rgba($green, 0.4);
       border-radius: 100%;
       display: flex;
@@ -120,8 +120,8 @@ body {
       position: relative;
    }
    &__line {
-      width: 658px;
-      height: 658px;
+      width: 656px;
+      height: 656px;
       border: 1px solid rgba($green, 0.4);
       border-radius: 100%;
       display: flex;
@@ -131,6 +131,9 @@ body {
    }
    &__image {
       width: 92%;
+   }
+   &__text {
+      padding-top: 6.4rem;
    }
    &__btn {
       background-color: transparent;
@@ -239,6 +242,7 @@ body {
 
 .description {
    margin: 0;
+   line-height: 1.5;
    &_size-s {
       font-size: 1.8rem;
    }
@@ -246,6 +250,7 @@ body {
 
 .link {
    color: $white;
+   letter-spacing: 0.13rem;
    font-weight: 400;
    text-transform: uppercase;
    padding: 2.5rem 4.2rem;
