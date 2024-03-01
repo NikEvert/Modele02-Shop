@@ -59,6 +59,7 @@ body {
       background-size: 1.7rem 1.5rem;
       position: relative;
       border: 1px solid $orange;
+      cursor: pointer;
       &:hover {
          background-color: $green;
          border: 1px solid $green;
@@ -97,10 +98,10 @@ body {
    &__item {
       margin-left: 12rem;
       max-width: 378px;
-      margin-top: 3rem;
+      margin-top: 6rem;
    }
    &__link {
-      margin-top: 6rem;
+      margin-top: 5.5rem;
    }
    &__flex {
       display: flex;
@@ -131,9 +132,12 @@ body {
    }
    &__image {
       width: 92%;
+      box-shadow: 20px 20px 30px rgba($green, 0.6);
+      border-radius: 100%;
+      animation: shadow 6s infinite;
    }
    &__text {
-      padding-top: 6.4rem;
+      padding-top: 4.7rem;
    }
    &__btn {
       background-color: transparent;
@@ -142,6 +146,7 @@ body {
       position: absolute;
       color: $green;
       text-align: left;
+      cursor: pointer;
       &:hover {
          //.main__btn {
          &::before {
@@ -181,11 +186,11 @@ body {
          }
       }
       &_3 {
-         bottom: -48px;
-         right: 281px;
+         bottom: -50px;
+         right: 244px;
          &::before {
-            bottom: 50px;
-            right: 26px;
+            top: -24px;
+            left: 13px;
          }
       }
    }
@@ -229,6 +234,7 @@ body {
    font-family: $font-cormorant;
    font-weight: 700;
    font-size: 8rem;
+   line-height: 1;
    margin: 0;
    &__span {
       font-style: italic;
