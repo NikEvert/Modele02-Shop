@@ -95,6 +95,7 @@ body {
    background-position-x: center;
    position: relative;
    padding-bottom: 193px;
+   z-index: 0;
    &__item {
       margin-left: 12rem;
       max-width: 378px;
@@ -213,6 +214,7 @@ body {
    }
    &__avocado {
       position: absolute;
+      z-index: -1;
       top: 47px;
       right: 0;
       width: 17.8rem;
