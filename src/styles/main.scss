@@ -148,6 +148,7 @@ body {
       position: absolute;
       color: $green;
       text-align: left;
+      line-height: 24px;
       cursor: pointer;
 
       &:hover {
@@ -183,17 +184,17 @@ body {
       }
       &_2 {
          top: 197px;
-         right: 5px;
+         right: -1px;
          &::before {
             top: 16px;
-            right: 82px;
+            right: 87px;
          }
       }
       &_3 {
          bottom: -50px;
          right: 244px;
          &::before {
-            top: -30px;
+            top: -20px;
             left: 13px;
          }
       }
