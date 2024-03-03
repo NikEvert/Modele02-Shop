@@ -2,7 +2,7 @@
 
 $green: #27300f;
 $orange: RGBA(210, 106, 34, 1);
-$white: #fff;
+$white: #ffffff;
 
 $font-jost: 'Jost', sans-serif;
 $font-cormorant: 'Cormorant', serif;
@@ -93,6 +93,7 @@ body {
    background-image: url('../images/main.png');
    background-size: cover;
    background-position-x: center;
+   background-repeat: no-repeat;
    position: relative;
    padding-bottom: 193px;
    z-index: 0;
@@ -148,6 +149,7 @@ body {
       color: $green;
       text-align: left;
       cursor: pointer;
+
       &:hover {
          //.main__btn {
          &::before {
@@ -164,8 +166,9 @@ body {
          background-color: $green;
          width: 11px;
          height: 11px;
+
          box-shadow:
-            0 0 0 4px $white,
+            0 0 0 4px rgba(255, 255, 255, 1),
             0 0 0 5px $green;
          border-radius: 100%;
          position: absolute;
@@ -183,14 +186,14 @@ body {
          right: 5px;
          &::before {
             top: 16px;
-            right: 83px;
+            right: 82px;
          }
       }
       &_3 {
          bottom: -50px;
          right: 244px;
          &::before {
-            top: -24px;
+            top: -30px;
             left: 13px;
          }
       }
@@ -254,6 +257,9 @@ body {
    &_size-s {
       font-size: 1.8rem;
    }
+   &_size-m {
+      font-size: 2.4rem;
+   }
 }
 
 .link {
@@ -267,4 +273,92 @@ body {
    border-radius: 3.8rem;
    text-decoration: none;
    display: inline-block;
+}
+
+.offer {
+   background-image: url('../images/offer.png');
+   background-size: cover;
+   background-position-x: center;
+   background-repeat: no-repeat;
+   padding-top: 1.7rem;
+   padding-bottom: 200px;
+   &__text {
+      margin-top: 6rem;
+      max-width: 700px;
+   }
+   &__slider {
+      overflow: hidden;
+      padding-top: 95px;
+   }
+}
+
+.swiper {
+   overflow: initial;
+   &-slide {
+      border: 1px solid rgba($green, 0.4);
+      border-radius: 2rem;
+      box-sizing: border-box;
+      height: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 4rem;
+      &__title {
+         font-family: $font-cormorant;
+         margin: 0;
+         font-size: 3rem;
+         font-weight: 700;
+         color: $green;
+      }
+      &__text {
+         margin-top: 2.5rem;
+         max-width: 263px;
+         line-height: 24px;
+         color: rgba($green, 0.7);
+      }
+      &__link {
+         font-weight: 500;
+         color: rgba($green, 0.8);
+         display: flex;
+         align-items: center;
+         text-decoration: none;
+         text-transform: uppercase;
+         margin-top: 18px;
+         gap: 2rem;
+         letter-spacing: 0.13rem;
+         opacity: 0.8;
+         &::before {
+            content: '';
+            display: block;
+            width: 3rem;
+            height: 3rem;
+            background-image: url('../images/plus.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+         }
+      }
+   }
+   &-pagination {
+      display: none;
+   }
+   &-button-prev,
+   &-button-next {
+      top: -60px;
+      --swiper-navigation-size: 18px;
+      &:hover {
+         &::after {
+            color: rgba($green, 1);
+         }
+      }
+      &::after {
+         color: rgba($green, 0.4);
+      }
+   }
+   &-button-prev {
+      left: initial;
+      right: 81px;
+   }
+   &-button-next {
+      right: 0;
+   }
 }
