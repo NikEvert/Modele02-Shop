@@ -274,6 +274,8 @@ body {
    border-radius: 3.8rem;
    text-decoration: none;
    display: inline-block;
+   border: none;
+   cursor: pointer;
    &_max {
       padding: 2.5rem 5rem;
    }
@@ -583,6 +585,37 @@ body {
       margin-top: 8.5rem;
       margin-bottom: 5rem;
    }
+   &__btn {
+      display: flex;
+      margin: 0 auto;
+      align-items: center;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      color: $green;
+      font-size: 1.6rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding-top: 55px;
+      gap: 15px;
+      &::before {
+         content: '';
+         width: 25px;
+         height: 25px;
+         background-image: url('../images/refresh.png');
+         background-size: cover;
+         background-repeat: no-repeat;
+         &:hover {
+            color: $orange;
+            opacity: 0.2;
+         }
+      }
+
+      &:hover {
+         color: $orange;
+      }
+   }
 }
 
 .category {
@@ -661,5 +694,178 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
+   }
+}
+
+.delivery {
+   padding-top: 140px;
+   &__box {
+      padding-top: 76px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16.5rem;
+   }
+   &__description {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+   }
+   &__link {
+      color: $green;
+      &:hover {
+         color: $orange;
+      }
+   }
+   &__list {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+      gap: 30px;
+   }
+   &__item {
+      content: '';
+      background-repeat: no-repeat;
+      background-position: center center;
+      opacity: 0.4;
+      &:hover {
+         opacity: 1;
+         cursor: pointer;
+      }
+      &:nth-child(1) {
+         background-image: url('../images/mastercard.svg');
+         width: 53px;
+         height: 32px;
+      }
+      &:nth-child(2) {
+         background-image: url('../images/visa.svg');
+         width: 74px;
+         height: 23px;
+      }
+      &:nth-child(3) {
+         background-image: url('../images/paypal.svg');
+         width: 87px;
+         height: 24px;
+      }
+   }
+}
+
+.contact {
+   padding-top: 200px;
+   padding-bottom: 100px;
+   &-box {
+      display: flex;
+
+      justify-content: space-between;
+      &__item {
+         margin-top: 30px;
+      }
+      &__text {
+         margin-top: 58px;
+         margin-left: 120px;
+         max-width: 400px;
+         flex-grow: 1;
+         font-size: 18px;
+         line-height: 27px;
+         font-weight: 400;
+         color: $green;
+      }
+      &__form {
+         flex-basis: 589px;
+      }
+   }
+   &__list {
+      display: flex;
+      flex-direction: column;
+
+      list-style-type: none;
+      margin: 59px 0 0 0;
+      padding-left: 0;
+      gap: 20px;
+   }
+   &__link {
+      font-family: $font-jost;
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 900;
+      color: $green;
+      text-decoration: none;
+   }
+   &__item {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      &::before {
+         content: '';
+         background-repeat: no-repeat;
+      }
+      &:nth-child(1) {
+         &::before {
+            background-image: url('../images/phone.svg');
+            width: 29px;
+            height: 25px;
+         }
+      }
+      &:nth-child(2) {
+         &::before {
+            background-image: url('../images/mail.svg');
+            width: 29px;
+            height: 19px;
+         }
+      }
+   }
+}
+
+.card {
+   border: 2px solid rgba($green, 0.4);
+   padding: 3.2rem 5.8rem 4rem;
+   border-radius: 2rem;
+   &__title {
+      font-family: $font-cormorant;
+      font-size: 3rem;
+      margin-top: 0;
+   }
+   &__label {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      display: block;
+      margin-left: 0.6rem;
+   }
+   &__input {
+      border: 1px solid rgba($green, 0.4);
+      border-radius: 2rem;
+      padding: 2.2rem 3rem;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 2.8rem;
+      display: block;
+      &:focus {
+         border: 1px solid rgba($green, 1);
+         outline: none;
+      }
+      &:invalid {
+         border: red;
+      }
+   }
+   &__check {
+      font-size: 1.2rem;
+      color: rgba($green, 0.6);
+      line-height: 1.5;
+      max-width: 360px;
+      margin-top: 1.6rem;
+      margin-bottom: 0;
+   }
+   &__link {
+      margin-top: 1.2rem;
+      padding: 2.5rem 5.4rem;
+      letter-spacing: 0.2rem;
+   }
+   &__docs {
+      color: rgba($green, 0.6);
+      text-decoration: none;
+      border-bottom: 1px solid #ecedec;
+      cursor: pointer;
    }
 }
