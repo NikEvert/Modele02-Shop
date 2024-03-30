@@ -2,6 +2,7 @@
 
 $green: #27300f;
 $orange: RGBA(210, 106, 34, 1);
+$dark-orange: #cf5c0d;
 $white: #ffffff;
 
 $font-jost: 'Jost', sans-serif;
@@ -15,6 +16,9 @@ body {
    font-size: 1.6rem;
    font-family: $font-jost;
    color: $green;
+   background-image: url(../images/background.png);
+   background-size: cover;
+   background-repeat: no-repeat;
 }
 
 .header {
@@ -35,6 +39,7 @@ body {
    &__link {
       color: $green;
       text-decoration: none;
+      transition: 0.2s;
       &:hover {
          color: $orange;
       }
@@ -43,6 +48,7 @@ body {
       color: $green;
       font-weight: 500;
       text-decoration: none;
+      transition: 0.2s;
       &:hover {
          color: $orange;
       }
@@ -60,6 +66,7 @@ body {
       position: relative;
       border: 1px solid $orange;
       cursor: pointer;
+      transition: 0.2s;
       &:hover {
          background-color: $green;
          border: 1px solid $green;
@@ -95,10 +102,6 @@ body {
 }
 
 .main {
-   background-image: url('../images/main.png');
-   background-size: cover;
-   background-position-x: center;
-   background-repeat: no-repeat;
    position: relative;
    padding-bottom: 193px;
    z-index: 0;
@@ -164,6 +167,7 @@ body {
                0 0 0 4px $white,
                0 0 0 5px $orange;
          }
+
          //}
       }
 
@@ -172,12 +176,12 @@ body {
          background-color: $green;
          width: 11px;
          height: 11px;
-
          box-shadow:
             0 0 0 4px rgba(255, 255, 255, 1),
             0 0 0 5px $green;
          border-radius: 100%;
          position: absolute;
+         transition: 0.2s;
       }
       &_1 {
          top: 49px;
@@ -281,6 +285,10 @@ body {
    display: inline-block;
    border: none;
    cursor: pointer;
+   transition: 0.2s;
+   &:hover {
+      background-color: $dark-orange;
+   }
    &_max {
       padding: 2.5rem 5rem;
    }
@@ -292,10 +300,6 @@ body {
 }
 
 .offer {
-   background-image: url('../images/offer.png');
-   background-size: cover;
-   background-position-x: center;
-   background-repeat: no-repeat;
    padding-top: 1.7rem;
    padding-bottom: 12.4rem;
    &__text {
@@ -330,6 +334,7 @@ body {
       position: relative;
       padding: 20px 32px 40px 40px;
       z-index: 0;
+      transition: 0.3s;
       &_white {
          height: 520px;
          display: flex;
@@ -513,10 +518,6 @@ body {
 }
 
 .about {
-   background-image: url('../images/about.png');
-   background-size: cover;
-   background-position-x: center;
-   background-repeat: no-repeat;
    padding-top: 42px;
    padding-bottom: 147px;
    &__box {
@@ -582,10 +583,6 @@ body {
 }
 
 .trends {
-   background-image: url('../images/trends.png');
-   background-size: cover;
-   background-position-x: center;
-   background-repeat: no-repeat;
    padding-top: 44px;
    &__text {
       margin-top: 38px;
@@ -593,10 +590,6 @@ body {
 }
 
 .catalog {
-   background-image: url('../images/catalog.png');
-   background-size: cover;
-   background-position-x: center;
-   background-repeat: no-repeat;
    padding-top: 186px;
    &__list {
       margin-top: 8.5rem;
@@ -616,6 +609,7 @@ body {
       letter-spacing: 0.08em;
       padding-top: 55px;
       gap: 15px;
+      transition: 0.3s;
       &::before {
          content: '';
          width: 25px;
@@ -653,6 +647,7 @@ body {
       text-decoration: none;
       border-radius: 4rem;
       display: block;
+      transition: 0.2s;
       &:hover {
          border: 1px solid $orange;
          color: $orange;
@@ -669,6 +664,7 @@ body {
       border-radius: 2rem;
       padding: 2.7rem 3rem 3.8rem;
       box-sizing: border-box;
+      transition: 0.3s;
       &:hover {
          box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
       }
@@ -715,10 +711,6 @@ body {
 }
 
 .delivery {
-   background-image: url('../images/delivery.png');
-   background-size: cover;
-   background-position-x: center;
-   background-repeat: no-repeat;
    padding-top: 140px;
    &__box {
       padding-top: 76px;
@@ -734,6 +726,7 @@ body {
    }
    &__link {
       color: $green;
+      transition: 0.2s;
       &:hover {
          color: $orange;
       }
@@ -750,10 +743,15 @@ body {
       content: '';
       background-repeat: no-repeat;
       background-position: center center;
+      background-size: cover;
       opacity: 0.4;
+      transform: scale(1);
+      transition: 0.2s;
+
       &:hover {
          opacity: 1;
          cursor: pointer;
+         transform: scale(1.05);
       }
       &:nth-child(1) {
          background-image: url('../images/mastercard.svg');
@@ -800,7 +798,6 @@ body {
    &__list {
       display: flex;
       flex-direction: column;
-
       list-style-type: none;
       margin: 59px 0 0 0;
       padding-left: 0;
@@ -862,6 +859,7 @@ body {
       box-sizing: border-box;
       margin-bottom: 2.8rem;
       display: block;
+      transition: 0.2s;
       &:focus {
          border: 1px solid rgba($green, 1);
          outline: none;
@@ -897,10 +895,6 @@ footer {
 }
 
 .footer {
-   background-image: url('../images/footer.png');
-   background-size: cover;
-   background-position-x: center;
-   background-repeat: no-repeat;
    &__box {
       display: flex;
       justify-content: space-between;
@@ -948,6 +942,10 @@ footer {
       line-height: 1.2;
       font-weight: 400;
       color: #27300f;
+      transition: 0.2s;
+      &:hover {
+         color: $orange;
+      }
    }
    &-social {
       display: flex;
@@ -965,6 +963,7 @@ footer {
          background-repeat: no-repeat;
          background-position: center center;
          opacity: 0.8;
+         transition: 0.2s;
          &:hover {
             opacity: 1;
          }
@@ -998,6 +997,7 @@ footer {
       &__link {
          text-decoration: none;
          color: $green;
+         transition: 0.2s;
          &:hover {
             color: $orange;
          }
